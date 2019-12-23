@@ -13,8 +13,6 @@
    + [SSL](#201911_hw5_ssl)
      + [Additional task](#201911_hw5_ssl_a)
    + [VPN](#201911_hw5_sb)
-     + [Additional task](#201911_hw5__vpn_a)
-
 
 ## <a name="201911_hw3">HW3</a>
 Nothing to do
@@ -121,8 +119,6 @@ add net 0.0.0.0: gateway 192.168.231.1
 add net 128.0.0.0: gateway 192.168.231.1
 Mon Dec 23 20:42:42 2019 Initialization Sequence Completed
 ```
-
-#### <a name="201911_hw5_ssl_a">Additional task</a>
 
 https://34.94.180.123.sslip.io/
 

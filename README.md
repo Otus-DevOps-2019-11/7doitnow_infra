@@ -39,6 +39,7 @@ MacBook-Pro-Polina:7doitnow_infra polina$ tail -2 /etc/hosts
 34.94.180.123	bastion
 10.168.0.3	someinternalhost
 ```
+
 bastion_IP = 34.94.180.123
 someinternalhost_IP = 10.168.0.3
 

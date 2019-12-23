@@ -123,3 +123,7 @@ Mon Dec 23 20:42:42 2019 Initialization Sequence Completed
 ```
 
 #### <a name="201911_hw5_ssl_a">Additional task</a>
+
+https://34.94.180.123.sslip.io/
+
+ssl - настроила. :D

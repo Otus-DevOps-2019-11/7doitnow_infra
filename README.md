@@ -22,12 +22,12 @@ Nothing to do
 ## <a name="201911_hw3">HW3. Git basic</a>
 git basic
 
-[Pull request](https://pages.github.com/)
+Pull request
 
 ## <a name="201911_hw4">HW4. Chatops</a>
 chatops
 
-[Pull request](https://pages.github.com/)
+Pull request
 
 ## <a name="201911_hw5">HW5. Cloud Bastion </a>
 **Cloud bastion**
@@ -123,4 +123,3 @@ Mon Dec 23 20:42:42 2019 Initialization Sequence Completed
 ```
 
 #### <a name="201911_hw5_ssl_a">Additional task</a>
-ssl

@@ -12,7 +12,7 @@
 4. [HW5. Cloud Bastion](#201911_hw5)
    + [SSL](#201911_hw5_ssl)
      + [Additional task](#201911_hw5_ssl_a)
-   + [VPN] (#201911_hw5_sb)
+   + [VPN](#201911_hw5_sb)
      + [Additional task](#201911_hw5__vpn_a)
 
 
@@ -93,16 +93,30 @@ sudo kill id
 
 
 ### <a name="201911_hw5_vpn">VPN </a>
-sudo pritunl setup-key
-6fb8ba8cdbb34337a84d6959125ca073
 
-mongodb://localhost:27017/pritunl
+Установила оф. клиент pritunl.
+Подключилась по ssh c ошибкой
+```
+MacBook-Pro-Polina:7doitnow_infra polina$ ssh -i ~/.ssh/appuser appuser@10.168.0.3
+Tunnel device open failed.
+Could not request tunnel forwarding.
+```
 
-[undefined][2019-12-22 18:47:13,423][INFO] Getting default administrator password
-Administrator default password:
-  username: "pritunl"
-  password: "tVsgTq0xdyq0"
-
-port 12165
+Несмотря на ошибку в консоли успешно подключилась
+```buildoutcfg
+Mon Dec 23 20:42:41 2019 Opened utun device utun1
+Mon Dec 23 20:42:41 2019 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Mon Dec 23 20:42:41 2019 /sbin/ifconfig utun1 delete
+ifconfig: ioctl (SIOCDIFADDR): Can't assign requested address
+Mon Dec 23 20:42:42 2019 NOTE: Tried to delete pre-existing tun/tap instance -- No Problem if failure
+Mon Dec 23 20:42:42 2019 /sbin/ifconfig utun1 192.168.231.2 192.168.231.2 netmask 255.255.255.0 mtu 1500 up
+add net 192.168.231.0: gateway 192.168.231.2
+Mon Dec 23 20:42:42 2019 /tmp/pritunl/8c308393f6c48c0cb8bd7a076d6ab832-up.sh utun1 1500 1558 192.168.231.2 255.255.255.0 init
+dhcp-option DNS 8.8.8.8
+add net 34.94.180.123: gateway 192.168.1.1
+add net 0.0.0.0: gateway 192.168.231.1
+add net 128.0.0.0: gateway 192.168.231.1
+Mon Dec 23 20:42:42 2019 Initialization Sequence Completed
+```
 
 #### <a name="201911_hw5_ssl_a">Additional task</a>

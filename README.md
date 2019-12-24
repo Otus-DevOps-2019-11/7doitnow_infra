@@ -129,7 +129,7 @@ ssl - настроила. :D
 
 ## <a name="201911_hw6">HW6. Cloud testapp </a>
 
-testapp_IP = 35.228.36.236
+testapp_IP = 35.228.226.109
 testapp_port = 9292
 
 check gloud utils
@@ -155,7 +155,7 @@ reddit-app  europe-north1-b  g1-small                   10.166.0.3   35.228.36.2
 
 ```
 MacBook-Pro-Polina:7doitnow_infra polina$ tail -1 /etc/hosts
-35.228.36.236	reddit-app
+35.228.226.109	reddit-app
 
 ssh -i ~/.ssh/appuser -A appuser@reddit-app
 ```
@@ -175,6 +175,39 @@ appuser  21923  0.0  0.0  12916   984 pts/0    S+   19:01   0:00 grep --color=au
 
 ### <a name="201911_hw6_a">Additional task</a>
 
-startup script
 
-default-puma-server rule
++ Создание vm c помощью локального стартап файлика
+```
+gcloud compute instances create reddit-app\
+  --boot-disk-size=10GB \
+  --image-family ubuntu-1604-lts \
+  --image-project=ubuntu-os-cloud \
+  --machine-type=g1-small \
+  --tags puma-server \
+  --restart-on-failure \
+  --metadata-from-file startup-script=startup_script.sh
+
+```
++ Создание vm c помощью файлика, который указан через URL
+
+```
+gcloud compute instances create reddit-app\
+  --boot-disk-size=10GB \
+  --image-family ubuntu-1604-lts \
+  --image-project=ubuntu-os-cloud \
+  --machine-type=g1-small \
+  --tags puma-server \
+  --restart-on-failure \
+  --metadata startup-script-url=https://github.com/Otus-DevOps-2019-11/7doitnow_infra/blob/cloud-testapp/startup_script.sh
+```
+
+Правило фаервола
+
+```
+gcloud compute firewall-rules create default-puma-server \
+  --allow tcp:9292
+  --target-tags=puma-server
+
+```
+
+##### Happy end!

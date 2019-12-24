@@ -12,11 +12,10 @@
 5. [HW5. Cloud Bastion](#201911_hw5)
    + [SSL](#201911_hw5_ssl)
      + [Additional task](#201911_hw5_ssl_a)
-   + [VPN](#201911_hw5_sb)
+   + [VPN](#201911_hw5_vpn)
+
 6. [HW6. Cloud testapp](#201911_hw6)
-   + [SSL](#201911_hw5_ssl)
-     + [Additional task](#201911_hw5_ssl_a)
-   + [VPN](#201911_hw5_sb)
+   + [Additional task](#201911_hw6_a)
 
 ## <a name="201911_hw3">HW3</a>
 Nothing to do
@@ -130,10 +129,8 @@ ssl - настроила. :D
 
 ## <a name="201911_hw6">HW6. Cloud testapp </a>
 
-```
 testapp_IP = 35.228.36.236
 testapp_port = 9292
-```
 
 check gloud utils
 ```
@@ -175,3 +172,9 @@ appuser@reddit-app:~/reddit$ ps aux | grep puma
 appuser  21909  4.5  1.5 515388 26776 ?        Sl   19:00   0:00 puma 3.10.0 (tcp://0.0.0.0:9292) [reddit]
 appuser  21923  0.0  0.0  12916   984 pts/0    S+   19:01   0:00 grep --color=auto puma
 ```
+
+### <a name="201911_hw6_a">Additional task</a>
+
+startup script
+
+default-puma-server rule

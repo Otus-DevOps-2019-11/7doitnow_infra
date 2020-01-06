@@ -129,7 +129,7 @@ ssl - настроила. :D
 
 ## <a name="201911_hw6">HW6. Cloud testapp </a>
 
-testapp_IP = 35.228.226.109
+testapp_IP = 34.66.55.47
 testapp_port = 9292
 
 check gloud utils
@@ -143,21 +143,6 @@ ACTIVE  ACCOUNT
 To set the active account, run:
     $ gcloud config set account `ACCOUNT`
 
-```
-
-created the machine
-
-```
-NAME        ZONE             MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
-reddit-app  europe-north1-b  g1-small                   10.166.0.3   35.228.36.236  RUNNING
-
-```
-
-```
-MacBook-Pro-Polina:7doitnow_infra polina$ tail -1 /etc/hosts
-35.228.226.109	reddit-app
-
-ssh -i ~/.ssh/appuser -A appuser@reddit-app
 ```
 
 Пума запустилась

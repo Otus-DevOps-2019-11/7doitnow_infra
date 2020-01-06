@@ -10,7 +10,7 @@ sudo bash -c 'echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.
 sudo apt update
 sudo apt install -y mongodb-org
 sudo systemctl start mongod.service
-sudo systemctl enable mongod.servic
+sudo systemctl enable mongod.service
 
 #deploy
 cd /home/appuser

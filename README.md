@@ -17,6 +17,9 @@
 6. [HW6. Cloud testapp](#201911_hw6)
    + [Additional task](#201911_hw6_a)
 
+7. [HW7. Packer base](#201911_hw7)
+   + [Additional task](#201911_hw7_a)
+
 ## <a name="201911_hw3">HW3</a>
 Nothing to do
 
@@ -192,8 +195,26 @@ gcloud compute instances create reddit-app\
 gcloud compute firewall-rules create default-puma-server \
   --allow tcp:9292
   --target-tags=puma-server
-s
+
 ```
 
+## <a name="201911_hw7">HW7. Packer base</a>
+
+```
+gcloud auth application-default login
+gcloud projects list
+gcloud compute instances list
+```
+
+```
+ssh appuser@34.70.246.35
+```
+
+deploy.sh
+```
+git clone -b monolith https://github.com/express42/reddit.git
+cd reddit && bundle install
+puma -d
+```
 
 ##### Happy end!

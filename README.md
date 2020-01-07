@@ -18,7 +18,7 @@
    + [Additional task](#201911_hw6_a)
 
 7. [HW7. Packer base](#201911_hw7)
-   + [Additional task](#201911_hw7_a)
+   + [Additional task. Baked VM image](#201911_hw7_a)
 
 ## <a name="201911_hw3">HW3</a>
 Nothing to do
@@ -200,10 +200,13 @@ gcloud compute firewall-rules create default-puma-server \
 
 ## <a name="201911_hw7">HW7. Packer base</a>
 
+Новые полезные командочки. ^-^
+
 ```
 gcloud auth application-default login
 gcloud projects list
 gcloud compute instances list
+-on-error=ask дебаг при создании vm
 ```
 
 ```
@@ -215,6 +218,28 @@ deploy.sh
 git clone -b monolith https://github.com/express42/reddit.git
 cd reddit && bundle install
 puma -d
+```
+
+Запуск сборки с переменными
+```
+packer build -var 'project_id=aaaa-123' packer_example.json
+packer build -var-file variables.json packer_example.json
+
+```
+
+Валидация
+```
+packer validate -var 'project_id=aaaa-123' packer_example.json
+```
+
+
+Example variables.json.example
+
+
+
+### <a name="201911_hw7_a">Additional task</a>
+```
+test
 ```
 
 ##### Happy end!

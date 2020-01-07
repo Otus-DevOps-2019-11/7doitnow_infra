@@ -98,7 +98,7 @@ sudo kill id
 Порт сервера pritunl - 17157
 
 Установила оф. клиент pritunl.
-Подключилась по ssh c ошибкой
+Подключилась по ssh.
 
 ```
 MacBook-Pro-Polina:7doitnow_infra polina$ ssh -i ~/.ssh/appuser appuser@10.128.0.4

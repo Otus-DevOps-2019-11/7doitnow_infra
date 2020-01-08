@@ -223,13 +223,14 @@ puma -d
 Запуск сборки с переменными
 ```
 packer build -var 'project_id=aaaa-123' packer_example.json
-packer build -var-file variables.json packer_example.json
+packer build -var-file variables.json ubuntu16.json
 
 ```
 
 Валидация
 ```
-packer validate -var 'project_id=aaaa-123' packer_example.json
+packer validate -var-file variables.json  ubuntu16.json
+packer validate ./ubuntu16.json
 ```
 
 
